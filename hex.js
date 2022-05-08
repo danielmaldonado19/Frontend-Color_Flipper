@@ -9,38 +9,27 @@ const color = document.querySelector(".color");
 btn.addEventListener('click', () => {
 
     /*const rdmParam0 = randomNumber(hexElements.length);
-    let hexChar0 = (hexElements[rdmParam0]).toString();
+    let hexChar0 = (hexElements[rdmParam0]).toString();*/
 
-    const rdmParam1 = randomNumber(hexElements.length);
-    let hexChar1 = (hexElements[rdmParam1]).toString();
+    hexColor = [];
+    /*This array will contain all the hex color char.*/
 
-    const rdmParam2 = randomNumber(hexElements.length);
-    let hexChar2 = (hexElements[rdmParam2]).toString();
-
-    const rdmParam3 = randomNumber(hexElements.length);
-    let hexChar3 = (hexElements[rdmParam3]).toString();
-
-    const rdmParam4 = randomNumber(hexElements.length);
-    let hexChar4 = (hexElements[rdmParam4]).toString();
-
-    const rdmParam5 = randomNumber(hexElements.length);
-    let hexChar5 = (hexElements[rdmParam5]).toString();*/
-    
-    /*let text = document.body.style.backgroundColor = 
-    hexChar0 + hexChar1 + hexChar2 + hexChar3 + hexChar4
-    + hexChar5;
-    
-    console.log(text);*/
-
-    hexParam = [];
-
-    for(i = 0; i <= 5; i++){
-        rdmParam = randomNumber(hexElements.length)
-        hexParam.push(rdmParam);
-        console.log(rdmParam)
+    for(i = 0; i < 6; i++){
+        rdmParam = randomNumber(hexElements.length);
+        hexColor.push((hexElements[rdmParam]).toString());
     }
+    /*This cycle generates a char for each of the 6 char
+    of an hex color and will store them in the array.*/
 
-    color.textContent = hexElements[rdmParam];
+    let fullColor = hexColor[0] + hexColor[1] + hexColor[2]
+    + hexColor[3] + hexColor[4] + hexColor[5];
+    console.log(hexColor[0] + hexColor[1] + hexColor[2]
+    + hexColor[3] + hexColor[4] + hexColor[5]);
+    /*fullColor is the string of the hex color.*/
+
+    document.body.style.backgroundColor = '#' + fullColor;
+
+    color.textContent = '#' + fullColor;
     
 });
 

@@ -11,5 +11,20 @@ selector). In this case, the param has a "." because
 thats how we call it in CSS.*/
 
 btn.addEventListener('click', () => {
-    console.log(document.body);
+    /*We're going to test the background color's change
+    by using our defaultColors array. This has to work
+    by selecting a random number between 0 - 3 (the
+    # of array elements).*/
+
+    const rdmNumber = 2;
+
+    document.body.style.
+    backgroundColor = defaultColors[rdmNumber];
+    /*This property allow us to access to bkg color &
+    change it.*/
+
+    color.textContent = defaultColors[rdmNumber];
+    /*It's said .textContent is better to use than
+    .innerHTML in some cases.*/
+
 })

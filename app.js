@@ -26,7 +26,6 @@ btn.addEventListener('click', () => {
     color.textContent = defaultColors[rdmNumber];
     /*It's said .textContent is better to use than
     .innerHTML in some cases.*/
-    console.log(rdmNumber);
 });
 
 

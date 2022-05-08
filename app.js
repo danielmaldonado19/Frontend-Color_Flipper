@@ -16,15 +16,22 @@ btn.addEventListener('click', () => {
     by selecting a random number between 0 - 3 (the
     # of array elements).*/
 
-    const rdmNumber = 2;
+    const rdmNumber = randomNumber(defaultColors.length);
 
-    document.body.style.
-    backgroundColor = defaultColors[rdmNumber];
+    document.body.style.backgroundColor = 
+    defaultColors[rdmNumber];
     /*This property allow us to access to bkg color &
     change it.*/
 
     color.textContent = defaultColors[rdmNumber];
     /*It's said .textContent is better to use than
     .innerHTML in some cases.*/
+    console.log(rdmNumber);
+});
 
-})
+
+function randomNumber (maxNum) {
+    return Math.floor(Math.random() * ((maxNum)- 0));
+};
+/*This function generates random number and its param
+is the max number of the interval (the min number is 0)*/
